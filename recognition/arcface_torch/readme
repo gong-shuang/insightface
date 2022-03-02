@@ -1,0 +1,29 @@
+
+
+首先要修改configs目录下的ms1mv3_r50_lr02.py文件的路径，如下：;
+/home/gs/hand_4T/01_dataSets/MS1MV3
+
+
+运行命令：
+修改一下readme.md中的命令，该文件是8个gpu，修改成2个。
+python -m torch.distributed.launch --nproc_per_node=2 --nnodes=1 --node_rank=0 --master_addr="127.0.0.1" --master_port=12581 train.py configs/ms1mv3_r50_lr02
+
+
+训练的太慢了，不训练了
+Training: 2022-03-02 15:45:47,410-Speed 133.03 samples/sec   Loss 46.0232   LearningRate 0.0006   Epoch: 0   Global Step: 130   Fp16 Grad Scale: 16384   Required: 278 hours
+Training: 2022-03-02 15:46:06,146-Speed 136.64 samples/sec   Loss 45.9334   LearningRate 0.0007   Epoch: 0   Global Step: 140   Fp16 Grad Scale: 16384   Required: 277 hours
+Training: 2022-03-02 15:46:25,787-Speed 130.34 samples/sec   Loss 45.9237   LearningRate 0.0007   Epoch: 0   Global Step: 150   Fp16 Grad Scale: 16384   Required: 277 hours
+Training: 2022-03-02 15:46:46,136-Speed 125.81 samples/sec   Loss 45.9442   LearningRate 0.0008   Epoch: 0   Global Step: 160   Fp16 Grad Scale: 16384   Required: 277 hours
+Training: 2022-03-02 15:47:06,359-Speed 126.59 samples/sec   Loss 46.0480   LearningRate 0.0008   Epoch: 0   Global Step: 170   Fp16 Grad Scale: 16384   Required: 278 hours
+Training: 2022-03-02 15:47:25,327-Speed 134.97 samples/sec   Loss 45.8585   LearningRate 0.0009   Epoch: 0   Global Step: 180   Fp16 Grad Scale: 16384   Required: 277 hours
+Training: 2022-03-02 15:47:46,013-Speed 123.76 samples/sec   Loss 45.9485   LearningRate 0.0009   Epoch: 0   Global Step: 190   Fp16 Grad Scale: 16384   Required: 278 hours
+Training: 2022-03-02 15:48:05,850-Speed 129.05 samples/sec   Loss 45.8608   LearningRate 0.0010   Epoch: 0   Global Step: 200   Fp16 Grad Scale: 16384   Required: 278 hours
+Training: 2022-03-02 15:48:27,156-Speed 120.16 samples/sec   Loss 45.8923   LearningRate 0.0010   Epoch: 0   Global Step: 210   Fp16 Grad Scale: 16384   Required: 279 hours
+Training: 2022-03-02 15:48:47,662-Speed 124.84 samples/sec   Loss 45.9100   LearningRate 0.0011   Epoch: 0   Global Step: 220   Fp16 Grad Scale: 16384   Required: 279 hours
+Training: 2022-03-02 15:49:07,724-Speed 127.61 samples/sec   Loss 45.8811   LearningRate 0.0011   Epoch: 0   Global Step: 230   Fp16 Grad Scale: 16384   Required: 279 hours
+Training: 2022-03-02 15:49:27,773-Speed 127.69 samples/sec   Loss 45.8436   LearningRate 0.0012   Epoch: 0   Global Step: 240   Fp16 Grad Scale: 16384   Required: 279 hours
+Training: 2022-03-02 15:49:48,077-Speed 126.08 samples/sec   Loss 45.8603   LearningRate 0.0012   Epoch: 0   Global Step: 250   Fp16 Grad Scale: 16384   Required: 280 hours
+Training: 2022-03-02 15:50:07,650-Speed 130.80 samples/sec   Loss 45.9015   LearningRate 0.0013   Epoch: 0   Global Step: 260   Fp16 Grad Scale: 16384   Required: 279 hours
+Training: 2022-03-02 15:50:27,654-Speed 127.98 samples/sec   Loss 45.6929   LearningRate 0.0013   Epoch: 0   Global Step: 270   Fp16 Grad Scale: 16384   Required: 279 hours
+Training: 2022-03-02 15:50:47,685-Speed 127.81 samples/sec   Loss 45.6992   LearningRate 0.0014   Epoch: 0   Global Step: 280   Fp16 Grad Scale: 16384   Required: 280 hours
+Training: 2022-03-02 15:51:07,290-Speed 130.58 samples/sec   Loss 45.7547   LearningRate 0.0014   Epoch: 0   Global Step: 290   Fp16 Grad Scale: 16384   Required: 279 hours

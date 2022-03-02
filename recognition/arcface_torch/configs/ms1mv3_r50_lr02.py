@@ -19,7 +19,8 @@ config.lr = 0.2
 config.verbose = 2000
 config.dali = False
 
-config.rec = "/train_tmp/ms1m-retinaface-t1"
+# config.rec = "/train_tmp/ms1m-retinaface-t1"
+config.rec = "/home/gs/hand_4T/01_dataSets/insightface/Training/MS1MV3/ms1m-retinaface-t1"
 config.num_classes = 93431
 config.num_image = 5179510
 config.num_epoch = 25
